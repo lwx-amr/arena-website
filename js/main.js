@@ -1,6 +1,4 @@
 $(function(){
-  console.log("amr");
-
   // Adjust Categories choice
   $(".filters li").on("click",function(){
     $(this).addClass("active").siblings().removeClass("active");

@@ -1,47 +1,16 @@
-<?php
-  session_start();
-  if(isset($_SESSION['username'])){
-    header ('Location: home.php');
-    exit();
-  }else{
-
-  }
-  $noNavbar = "";
-  $noEnd = "";
-  $pageTitle = "Arena - Register";
-  $lock = true;
-  include 'init.php';
-
-  // Check if come from Request not normal reload
-  if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-    $name = $_POST['name'];
-    $location = $_POST['location'];
-    $email = $_POST['email'];
-    $hashedPass = sha1($password);
-    $path=$_POST['image'];
-    $tele=$_POST['tele'];
-
-    // Send Date to DataBase
-    $q1=$con->prepare("INSERT INTO account (username, password, email)  values ('$username','$hashedPass','$email')");
-    $q2 = $con->prepare("INSERT INTO user (username, name, location, photoPath, tele, email) values ('$username','$name','$location','$path','$tele','$email')");
-
-    try{
-      $q2->execute();
-      $q1->execute();
-    }catch(PDOException $e){
-      $lock = false;
-      echo "Erro: ".$e;
-    }
-    if($lock){
-      $_SESSION['username'] = $username;
-      header ('Location: home.php'); // Redirect To Home after Register
-      exit();
-    }
-  }
-  include $tp1.'header.php';
-?>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Arena - Register</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Laila:700|Roboto:400,500,900">
+  </head>
+  <body>
     <section class="register access">
       <div class="container">
         <div class="content-acc">
@@ -60,7 +29,7 @@
                 <div class="text">
                   <h5>Register now to join our family</h5>
                 </div>
-                <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+                <form> <!--TODO add Register ajax-->
                   <div class="form-group d-flex">
                     <input type="text" name="name" id="name" placeholder="Name" required>
                   </div>
@@ -84,7 +53,7 @@
                   </div>
                   <div class="foot d-flex">
                     <input type="submit" name="" value="Register" class="btn">
-                    <h6>Already have acount? <a href="login.php">Login Now</a> </h6>
+                    <h6>Already have acount? <a href="login.html">Login Now</a> </h6>
                   </div>
                 </form>
               </div>
@@ -93,4 +62,9 @@
         </div>
       </div>
     </section>
-<?php include $tp1.'footer.php'; ?>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
