@@ -408,7 +408,7 @@ a:hover{
 .search-bar{
   display: flex;
   width: 500px;
-  margin-left: 50px;
+  margin-left: 55px;
   position: relative;
 }
 .search-bar form{
