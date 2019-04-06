@@ -1,0 +1,431 @@
+/*----------------------------- Start Global ---------------------------------*/
+body{
+  font-family: 'Roboto', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+
+}
+h1{
+  font-size: 200px;
+  font-family: 'Laila', serif;
+  margin-bottom: 0;
+}
+h2{
+  font-size: 36px;
+}
+h3{
+  font-size: 28px;
+}
+h4{
+  font-size: 24px;
+}
+h5{
+  font-size: 20px;
+}
+h6{
+  font-size: 16px
+}
+ul,li{
+  margin: 0;
+  padding: 0;
+}
+a:hover{
+  text-decoration: none;
+}
+/*----------------------------- Start Global ---------------------------------*/
+/*----------------------------- Start Framework ---------------------------------*/
+.h1{
+  font-size: 45px;
+}
+.main-color{
+  color:#303030;
+}
+.second-color{
+  color: #82B541;
+}
+.second-back{
+  background-color: #82B541;
+}
+.main-back{
+    background-color:#282828;
+}
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4)
+}
+.nice-font{
+  /* font-family: "another day in paradise" */
+}
+.btn{
+ display: block;
+ width: 190px;
+ border: 1px solid #ccc;
+ font-size: 20px;
+ margin: 40px 20px;
+ color: #fff;
+ -webkit-transition: all .2s ease-in-out;
+ -moz-transition: all .2s ease-in-out;
+ -o-transition: all .2s ease-in-out;
+ transition: all .2s ease-in-out;
+}
+.logo,
+.head h2{
+  font-family: "laila";
+}
+.head h2{
+  /* font-size: 36px; */
+}
+.content{
+  width: 80%;
+  margin:0 auto;
+  min-height: 100vh;
+  background-color: #f9f9f920;
+  padding-bottom: 30px;
+  box-shadow: 0 1px 5px 0px #ccc;
+  padding-bottom: 100px;
+}
+.content .head{
+  padding-top: 100px;
+}
+.image img{
+  width: 100%;
+}
+/*----------------------------- End Framework ---------------------------------*/
+/*----------------------------- Start interface ---------------------------------*/
+.interface{
+  height:100vh;
+  background: url("../images/headerBack.jpg") center center no-repeat;
+  position: relative;
+  color: #fff;
+}
+.interface .text{
+  margin-top: 80px;
+}
+.interface .text p{
+  font-size: 24px;
+  letter-spacing: 20px;
+  display: block;
+  margin-top: -20px;
+  margin-left: 10px;
+  text-transform: uppercase;
+}
+.interface .welcome{
+  margin-top: 70px;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.interface .btn:hover{
+  box-shadow: 0 0 5px 1px #999;
+  -webkit-box-shadow: 0 0 5px 1px #999;
+  color: #fff;
+}
+.interface .buttons{
+  justify-content:center;
+}
+/*----------------------------- End interface ---------------------------------*/
+/*----------------------------- Start Access ---------------------------------*/
+.access{
+  height: 100vh;
+  background-color:#f6f6f6;
+  /* background-image: url("../images/access.jpg"); */
+  color: #fff;
+  padding-top: 11vh;
+}
+.access.register{
+  padding-top: 5vh;
+}
+.access.register .content-acc{
+  height: 88vh !important;
+}
+.access .container{
+  width: 1000px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 1px 10px 2px #ccc;
+  -webkit-box-shadow: 0 1px 10px 2px #ccc;
+}
+.access .content-acc{
+  background-color: #fcfcfc;
+  height: 80vh;
+}
+.access .row{
+  height: 100%;
+}
+.access .row >div:first-of-type{
+  height: 100%;
+  background:url("../images/rowBack.jpg");
+  background-size: cover;
+}
+.access .overlay{
+  background-color: rgba(0, 0, 0, 0.14)
+}
+.access .overlay img{
+  height: 100%;
+}
+.access .overlay .text{
+  margin-top: 120px;
+}
+.access .overlay .text p{
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+.access .overlay .text h2{
+  font-size: 60px;
+  margin-top: 30px;
+}
+.access .overlay .text p:last-of-type{
+  font-size: 18px;
+  margin-top: 50px;
+  padding: 0 40px;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+.access .form{
+  color: #333;
+  padding: 50px 30px;
+}
+.access .form h5{
+  color: #555;
+  text-transform: capitalize;
+}
+.access .form form{
+  margin: 80px 0 80px;
+}
+.access .form .form-group{
+    /* justify-content: space-between; */
+}
+.access .form input{
+  width: 65%;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0;
+  margin-top: 20px;
+  color: #666;
+}
+.access.register .form input{
+  margin-top: 13px;
+}
+.access .form input:focus{
+  outline: 0;
+}
+.register .form .foot{
+  margin-top: 20px;
+}
+.register .form input[type="file"]{
+  width: 99px;
+  position: relative;
+}
+.register .form .file{
+  width: 335px;
+  justify-content: space-between;
+}
+.register .form .file span{
+  width: 30px;
+  height: 30px;
+  background-color: #e5e5e5;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 10px;
+}
+.register .form .file input[type="file"]{
+  width: 120px;
+  height: 30px;
+}
+.register .form .file input[type="file"]::after{
+  content: "Upload Image";
+  position: absolute;
+  top: 0;
+  left:0;
+  width: 120px;
+  height: 51px;
+  background-color: #fff;
+  line-height: 31px;
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+}
+.register .form .foot h6{
+  margin: 30px 0 0 60px;
+}
+.access .form input.btn{
+  width: auto !important;
+  border: 1px solid #ccc;
+  margin-left: 0;
+  font-size: 18px;
+  padding: 5px 35px;
+  border-radius: 5px;
+  background-color: #555;
+  color: #fff;
+}
+.register.access .form form{
+  margin: 20px 0 30px;
+}
+.register.access .form .form-group{
+  margin-bottom: 7px;
+}
+/*----------------------------- End Acess---------------------------------*/
+/*----------------------------- Start Header ---------------------------------*/
+.header{
+  padding: 0px 30px;
+}
+.header .row{
+  justify-content: space-between;
+}
+.header h2{
+  margin: 0;
+}
+.header h2 a{
+  color: #fff;
+}
+.collapse{
+  justify-content: space-between;
+  /* padding-left: 342px; */
+  flex-basis: 300px !important;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.bg-light {
+  background-color: transparent !important;
+}
+.nav-link{
+  padding: 0;
+}
+.navbar-expand-lg{
+  justify-content: space-between;
+}
+.collapse .links li{
+  display: inline-block;
+  margin: 0 30px;
+  /* font-size: 18px; */
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  letter-spacing: 1px;
+}
+.collapse .links li:hover,
+.collapse .links li.active{
+  border-bottom-color: #82B541;
+}
+.collapse .links li a{
+  display: block;
+  padding: 5px 0;
+  color: #fff;
+}
+.logo i{
+  font-size: 40px;
+  color: #82b541;
+  transform: translateY(-3px);
+  margin-left: 5px;
+}
+.search-bar{
+  display: flex;
+  width: 500px;
+  margin-left: 50px;
+  position: relative;
+}
+.search-bar form{
+  width: 450px;
+}
+.search-bar form >*{
+  display: inline-block;
+  border: 0;
+  border-radius: 5px;
+}
+.search-bar input[type="text"]{
+  width: 100%;
+  margin: 0;
+  display: inline-block;
+  padding: 8px 20px;
+}
+.search-bar button{
+  width: 10%;
+  margin: 0;
+  display: inline-block;
+  background-color: #82B541;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 10%;;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.search-bar button img{
+  width: 100%;
+  padding-bottom: 4px;
+  padding-left: 5px;
+}
+/*--------------------------------- End Header ------------------------------*/
+/*--------------------------------- Start Home ------------------------------*/
+
+/*--------------------------------- End Home ------------------------------*/
+/*----------------------------- Start Profile ---------------------------------*/
+.profile .head{
+  margin-bottom:80px;
+}
+.profile .true{
+  margin-left:40px;
+}
+.profile .true .info ul li{
+  padding: 20px 0;
+}
+.profile .user-posts{
+  margin-top: 120px;
+  padding: 0 40px;
+}
+.profile .user-posts .inner{
+  border-top: 2px solid #82B541;
+  padding-top: 40px;
+}
+.profile .user-posts .user-post .item{
+  display: flex;
+  justify-content: flex-start;
+  padding: 40px 20px 40px;
+  position: relative;
+  margin-bottom: 40px;
+}
+.profile .user-posts .user-post .item::after{
+  content: "";
+  width: 300px;
+  height: 2px;
+  background-color: #82B541;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 150px);
+}
+.profile .user-posts .user-post .image{
+  width: 300px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-right: 80px;
+}
+.profile .user-posts .user-post .text h5{
+  padding: 19px 0;
+}
+.profile .row >div ~ .match{
+  display: none;
+}
+/*----------------------------- End Profile ---------------------------------*/
+/*----------------------------- Start Footer ---------------------------------*/
+.footer {
+  margin-top: 150px;
+  padding: 30px 0;
+  color: #fff;
+}
+/*----------------------------- End Footer ---------------------------------*/
