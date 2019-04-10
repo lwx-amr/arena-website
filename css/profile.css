@@ -1,0 +1,57 @@
+.content{
+    padding: 15px;
+}
+.flexRow{
+    display: flex;
+    flex-direction: row;
+}
+.flexColumn{
+    display: flex;
+    flex-direction: column;
+}
+#userImg{
+    height: 300px;
+    width: 300px;
+    border-radius: 3px;
+
+    border: 2px solid #282828;
+}
+.info{
+    font-family: 'Roboto', sans-serif;
+    margin-left: 20px;
+    padding: 10px;
+    width: 100%;
+}
+.info #userName{
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+.pieceOfInfo{
+    align-items: center;
+    margin-bottom: 10px;
+}
+.pieceOfInfo > *{
+    margin: 0px;
+}
+.iconSquare{
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin-right: 10px;
+}
+.mainSection{
+    margin-top: 30px;
+}
+.sectionTitle{
+    font-size: 17px;
+    color: #9E9E9E;
+}
+.card{
+    padding: 10px;
+    margin-bottom: 10px;
+    border-color: #9E9E9E;
+    background-color: #FFF;
+}
