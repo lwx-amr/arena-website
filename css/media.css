@@ -20,8 +20,31 @@
 @media (min-width:768px) and (max-width:992px) {
 
 }
-@media (max-width:991px) {
-
+@media (max-width: 1000px) {
+    .search-bar{
+        margin: 20px 0px 10px 0px;
+        width: 100%;
+    }
+    .header{
+        height: 70px;
+        overflow: hidden;
+    }
+    .search-bar button {
+        width: 16%;
+        right: 0;
+    }
+    .burgerIcon{
+        display: initial;
+        color: #FFF;
+        font-size: 28px;
+    }
+    .content{
+        margin: 0px;
+        width: 100%;
+    }
+    .footer{
+        margin-top: 30px;
+    }
 }
 
 /* ------------------------- Large Screens ------------------------*/

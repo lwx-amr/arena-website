@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Arena - Profile</title>
@@ -8,79 +9,140 @@
     <link rel="stylesheet" href="css/fontawesome-all.min.css">
     <link rel="stylesheet" href="css/master.css">
     <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/profile.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Laila:700|Roboto:400,500,900">
-  </head>
-  <body>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body>
 
     <!-- Start Navbar -->
     <div class="header main-back">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="logo">
-            <h2 class="h1 logo"><a href="home.php">Arena</a><i class="fas fa-seedling"></i></h2>
-          </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="search-bar">
-            <form action="index.html" method="post">
-              <input type="text" name="" value="" placeholder="Search For ...">
-              <button type="submit" class="btn"><img src="images/search.png" alt=""></button>
-            </form>
-          </div>
-          <div class="collapse navbar-collapse d-flex" id="navbarSupportedContent">
-            <div class="links">
-              <ul class="navbar-nav">
-                <li><a href="home.php">Home</a></li>
-                <li><a href="#">Other</a></li>
-                <li><a href="#">Other</a></li>
-              </ul>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="logo">
+                <h2 class="h1 logo"><a href="home.html">Arena</a><i class="fas fa-seedling"></i></h2>
             </div>
-          </div>
+            <i class="fas fa-bars burgerIcon"></i>
+            <div class="search-bar">
+                <form action="index.html" method="post">
+                    <input type="text" name="" value="" placeholder="Search For ...">
+                    <button type="submit" class="btn"><img src="images/search.png" alt=""></button>
+                </form>
+            </div>
+            <div class="collapse navbar-collapse d-flex" id="navbarSupportedContent">
+                <div class="links">
+                    <ul class="navbar-nav">
+                        <li><a href="home.php">Home</a></li>
+                        <li><a href="#">Other</a></li>
+                        <li><a href="#">Other</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </div>
     <!-- End Navbar -->
 
     <!-- Start Profile -->
     <div class="profile">
-      <div class="container">
-        <!-- Start Body -->
-        <div class="content">
-          <div class="head text-center">
-            <h2 class="h1">Your Profile</h2>
-          </div>
+        <div class="container">
+            <!-- Start Body -->
+            <div class="content">
+                <section class="flexRow personalDataSection">
+                    <img id="userImg" src="images/profiles/5.jpg">
+                    <div class="flexColumn info">
+                        <h5 id="userName">John Snow</h5>
+                        <div class="flexRow pieceOfInfo">
+                            <div class="iconSquare"><i class="fas fa-envelope"></i></div>
+                            <h6>John.snow@bananas.com</h6>
+                        </div>
+                        <div class="flexRow pieceOfInfo">
+                            <div class="iconSquare"><i class="fas fa-mobile"></i></div>
+                            <h6>01000000000</h6>
+                        </div>
+                        <div class="flexRow pieceOfInfo">
+                            <div class="iconSquare"><i class="fas fa-toolbox"></i></div>
+                            <h6>Bananas, Cats, Crabs, Black Holes</h6>
+                        </div>
+                        <div class="flexRow pieceOfInfo">
+                            <div class="iconSquare"><i class="fas fa-business-time"></i></div>
+                            <h6>Other Stuff</h6>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="flexColumn mainSection recommendedJobsSection">
+                    <h4 class="sectionTitle">Recommended Jobs for you</h4>
+                    <div class="card">
+                        <p>Job gmda zo7le2a (alcontent hyt8yr lm a3rf aslan aih alcontent)</p>
+                    </div>
+                    <div class="card">
+                        <p>Job gmda zo7le2a (alcontent hyt8yr lm a3rf aslan aih alcontent)</p>
+                    </div>
+                    <a href="idk.html">More...</a>
+                </section>
+                
+                <section class="flexColumn mainSection recommendedQuizesSection">
+                    <h4 class="sectionTitle">Recommended Quizes for you</h4>
+                    <div class="card">
+                        <p>Quiz mohm zo7le2a (alcontent hyt8yr lm a3rf aslan aih alcontent)</p>
+                    </div>
+                    <div class="card">
+                        <p>Quiz mohm zo7le2a (alcontent hyt8yr lm a3rf aslan aih alcontent)</p>
+                    </div>
+                    <a href="idk.html">More...</a>
+                </section>
+
+                <section class="flexColumn mainSection postsSection">
+                    <h4 class="sectionTitle">Your Posts</h4>
+                    <div class="card">
+                        <p>post mohem (alcontent hyt8yr lm a3rf aslan aih alcontent)</p>
+                    </div>
+                    <div class="card">
+                        <p>post mohem (alcontent hyt8yr lm a3rf aslan aih alcontent)</p>
+                    </div>
+                    <div class="card">
+                        <p>post mohem (alcontent hyt8yr lm a3rf aslan aih alcontent)</p>
+                    </div>
+                    <div class="card">
+                        <p>post mohem (alcontent hyt8yr lm a3rf aslan aih alcontent)</p>
+                    </div>
+                </section>
+            </div>
         </div>
-      </div>
-      <!-- End Body -->
+        <!-- End Body -->
     </div>
     <!-- End Profile -->
 
     <!-- Start Pannel -->
     <div class="pannel">
-      <div class="admin">
-        <div class="image">
-          <img class="mr-3" src="images/profiles/5.jpg" alt="Generic placeholder image">
+        <div class="admin">
+            <div class="image">
+                <img class="mr-3" src="images/profiles/5.jpg" alt="Generic placeholder image">
+            </div>
+            <h6 class="mt-0">John Snow</h6>
         </div>
-        <h6 class="mt-0">John Snow</h6>
-      </div>
-      <a class="second-back insert" href="profile.html"><i class="fas fa-user"></i> Profile </a>
-      <div class="logout">
-        <a class="second-back" href="logout.php"><i class="fas fa-sign-out-alt"></i> Log out</a>
-      </div>
-      <i class="fas fa-cog"></i>
+        <a class="second-back insert" href="profile.html"><i class="fas fa-user"></i> Profile </a>
+        <div class="logout">
+            <a class="second-back"><i class="fas fa-sign-out-alt"></i> Log out</a>
+            <!--Add Logout ajax-->
+        </div>
+        <i class="fas fa-cog"></i>
     </div>
     <!-- End Pannel -->
 
 
     <!-- Start Footer -->
     <div class="footer main-back">
-      <div class="container text-center">
-          <h6>All CopyRights &copy; Are Reserved - Made With <i class="fas fa-heart second-color"></i> by <span class="logo">NAS</span> Team</h6>
-      </div>
+        <div class="container text-center">
+            <h6>All CopyRights &copy; Are Reserved - Made With <i class="fas fa-heart second-color"></i> by <span
+                    class="logo">NAS</span> Team</h6>
+        </div>
     </div>
     <!-- End Footer -->
 
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
-  </body>
+</body>
+
 </html>

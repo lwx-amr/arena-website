@@ -106,12 +106,12 @@ a:hover{
   background-color: #333;
   border-radius: 5px 0 0 5px;
   position: fixed;
-  top:20%;
-  right: -200px;
+  top:30%;
+  right: -201px;
   z-index: 5;
   transition: all 0.3s ease-in-out;
 }
-.pannel >i{
+.pannel > i{
   position: absolute;
   width: 30px;
   height: 30px;
@@ -378,6 +378,9 @@ a:hover{
 .navbar-expand-lg{
   justify-content: space-between;
 }
+.burgerIcon{
+    display: none;
+}
 .collapse .links li{
   display: inline-block;
   margin: 0 30px;
@@ -436,6 +439,7 @@ a:hover{
   right: 10%;;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+  color: #FFF;
 }
 .search-bar button img{
   width: 100%;
