@@ -1,0 +1,8 @@
+@media(max-width: 1000px){
+    h1{
+        font-size: 100px;
+    }
+    .interface .text{
+        margin-top: 30%;
+    }
+}

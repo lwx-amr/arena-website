@@ -55,3 +55,15 @@
     border-color: #9E9E9E;
     background-color: #FFF;
 }
+@media (max-width:1000px) {
+    .personalDataSection{
+        flex-direction: column;
+    }
+    .info{
+        margin: 0px;
+    }
+    #userImg{
+        width: 100%;
+        height: auto;
+    }
+}
