@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Arena - Register</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Laila:700|Roboto:400,500,900">
+  </head>
+  <body>
+    <section class="register access">
+      <div class="container">
+        <div class="content-acc">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="overlay text-center">
+                <div class="text">
+                  <p>Welcome To</p>
+                  <h2 class="h1 logo">Arena</h2>
+                  <p>We Hope that you enjoy your experience with us</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <div class="form">
+                <div class="text">
+                  <h5>Register now to join our family</h5>
+                </div>
+                <form id="regForm"> <!--TODO add Register ajax-->
+
+                  <!-- Step From 1 to 3 -->
+                  <div class="steps">
+                    <ul class="list-unstyled">
+                      <li>
+                        <div class="step active">
+                          <span class="circle">
+                            <img src="icons/true-mark.svg" alt="">
+                            <span>1</span>
+                          </span>
+                        </div>
+                        <span>Step 1</span>
+                      </li><li>
+                        <div class="step">
+                          <span class="line"></span>
+                          <span class="circle">
+                            <img src="icons/true-mark.svg" alt="">
+                            <span>2</span>
+                          </span>
+                        </div>
+                        <span>Step 2</span>
+                      </li><li>
+                        <div class="step">
+                          <span class="line"></span>
+                          <span class="circle">
+                            <img src="icons/true-mark.svg" alt="">
+                            <span>3</span>
+                          </span>
+                        </div>
+                        <span>Step 3</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Login Details -->
+                  <div class="tab log-det">
+                    <div class="form-group d-flex">
+                      <input type="text" name="username" id="username" placeholder="Username" required>
+                    </div>
+                    <div class="form-group d-flex">
+                      <input type="email" name="email" id="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group d-flex">
+                      <input id="password1" type="password" name="password" placeholder="Password" required>
+                    </div>
+                    <div class="form-group d-flex">
+                      <input id="password2" type="password" name="password" placeholder="Repeat Password" required>
+                    </div>
+                  </div>
+
+                 <!-- Personal Details -->
+                  <div class="tab personal">
+                    <div class="form-group d-flex aligned">
+                      <div class="file">
+                        <input type="file" name="image" id="image" required>
+                      </div>
+                      <div class="name">
+                        <input type="text" name="name" id="name" placeholder="Name" required>
+                        <input type="text" name="title" id="title" placeholder="Title" required>
+                      </div>
+                    </div>
+                    <div class="form-group d-flex">
+                      <input type="text" name="tele" id="tele" placeholder="Telephone" required>
+                    </div>
+                    <div class="form-group d-flex aligned">
+                      <div class="gender">
+                        <select name="" required>
+                          <option value="" hidden readonly>Gender</option>
+                          <option value="male">Male</option>
+                          <option value="female">Female</option>
+                        </select>
+                      </div>
+                      <div class="age-select">
+                        <select class="age">
+                          <option value="" hidden readonly>Age</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Interests Choice-->
+                  <div class="tab interests">
+                    <div class="form-group">
+                      <h6>Choice Your Interests</h6>
+                      <div class="checkboxs">
+                        <div class="element">
+                          <label>Front End
+                            <input type="checkbox" name="interests1" value="closed">
+                            <span class="checkmark"></span>
+                          </label>
+                        </div>
+                        <div class="element">
+                          <label>Back End
+                            <input type="checkbox" name="interests2" value="back">
+                            <span class="checkmark"></span>
+                          </label>
+                        </div>
+                        <div class="element">
+                          <label>Graphic
+                            <input type="checkbox" name="interests3" value="Graphic">
+                            <span class="checkmark"></span>
+                          </label>
+                        </div>
+                        <div class="element">
+                          <label>Motion Graphic
+                            <input type="checkbox" name="interests4" value="motion">
+                            <span class="checkmark"></span>
+                          </label>
+                        </div>
+                        <div class="element">
+                          <label>Programming
+                            <input type="checkbox" name="interests5" value="prog">
+                            <span class="checkmark"></span>
+                          </label>
+                        </div>
+                        <div class="element">
+                          <label>Network
+                            <input type="checkbox" name="interests6" value="network">
+                            <span class="checkmark"></span>
+                          </label>
+                        </div>
+                        <div class="element">
+                          <label>Secuirty
+                            <input type="checkbox" name="interests7" value="secuirty">
+                            <span class="checkmark"></span>
+                          </label>
+                        </div>
+                        <div class="element">
+                          <label>Marketing
+                            <input type="checkbox" name="interests8" value="marketing">
+                            <span class="checkmark"></span>
+                          </label>
+                        </div>
+                        <div class="element">
+                          <label>Business
+                            <input type="checkbox" name="interests9" value="business">
+                            <span class="checkmark"></span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-buttons">
+                      <button class="btn" type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                      <button class="btn" type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
