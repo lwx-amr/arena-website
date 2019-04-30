@@ -1,0 +1,38 @@
+.flexRow{
+    display: flex;
+    flex-direction: row;
+}
+.flexColumn{
+    display: flex;
+    flex-direction: column;
+}
+
+.titleRow{
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0px;
+}
+label{
+    margin: 0px;
+}
+.question .body{
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+.answer{
+    align-items: center;
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.answer label{
+    cursor: pointer;
+    width: 100%;
+}
+.answer input{
+    margin-right: 10px;
+}
+.loading{
+    text-align: center;
+}
