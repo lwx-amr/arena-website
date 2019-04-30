@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/fontawesome-all.min.css">
     <link rel="stylesheet" href="css/master.css">
     <link rel="stylesheet" href="css/media.css">
+    <link href="css/quiz.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Laila:700|Roboto:400,500,900">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -76,7 +78,7 @@
                                 <input type="number" class="form-control" id="quizPassScore" placeholder="">
                             </div>
                         </div>
-                         <div class="form-group row">
+                        <div class="form-group row">
                             <label for="quizNumQuestions" class="col-sm-2 col-form-label">Number of questions</label>
                             <div class="col-sm-10">
                                 <input type="number" class="form-control" id="quizNumQuestions" placeholder="">
@@ -107,17 +109,59 @@
             </div>
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                 <div class="card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
-                    wolf
-                    moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
-                    eiusmod.
-                    Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                    shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
-                    ea
-                    proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw
-                    denim
-                    aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    <form>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" for="question-text">Question text</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" id="question-text" placeholder="Text" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" for="question-type">Question type</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" id="question-type" placeholder="Type" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" for="question-skill-type">Question skill type</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" id="question-skill-type" placeholder="" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" for="question-score">Question score</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" id="question-score" placeholder="Score" type="number">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" for="proposed-answer">Add answer</label>
+                            <div class="input-group col-sm-10">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="add-answer-addon">Add this answer</span>
+                                </div>
+                                <input aria-describedby="add-answer-addon" class="form-control" id="proposed-answer"
+                                       placeholder="ًWrite answer here then choose the correct one"
+                                       type="text">
+                            </div>
+                        </div>
+                        <fieldset class="form-group">
+                            <div class="row">
+                                <legend class="col-form-label col-sm-2 pt-0">Answers</legend>
+                                <div class="col-sm-10">
+                                    <div id="question-answers">
+                                        <div id="appended-answers"></div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <button class="btn btn-primary" id="add-question" type="submit">Add</button>
+                    </form>
                 </div>
+
             </div>
         </div>
 
@@ -133,16 +177,16 @@
             </div>
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                 <div class="card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
-                    wolf
-                    moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
-                    eiusmod.
-                    Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                    shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
-                    ea
-                    proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw
-                    denim
-                    aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    <form>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" for="skill-type-name">Name</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" id="skill-type-name" placeholder="Name" type="text">
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary" id="add-skill-type" type="submit">Add</button>
+                    </form>
                 </div>
             </div>
         </div>

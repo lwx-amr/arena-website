@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    var question_answers = [];
+    var answer_count = 0;
 
     $("#add-quiz").click(function () {
 
@@ -18,12 +20,76 @@ $(document).ready(function () {
             contentType: 'application/json',
             data: JSON.stringify(quizData),
             success: function () {
-                alert("Success");
+                alert("Quiz added succefully");
             },
             error: function () {
-                alert('Failed!');
+                alert('Please try again');
             },
         });
+        return false; // prevent reloading the page
+    });
+
+    $("#add-question").click(function () {
+        correct_answer_idx = Number($("input[type='radio'][name='answers']:checked").val());
+        answers_with_is_correct = [];
+        for (i = 0; i < question_answers.length; i++) {
+            if (i == correct_answer_idx) {
+                answers_with_is_correct.push({"answer_text": question_answers[i], "is_correct": true});
+            } else {
+                answers_with_is_correct.push({"answer_text": question_answers[i]});
+            }
+        }
+        questionData = {
+            question_text: $("#question-text").val(),
+            question_type: 'MCQ',
+            score: Number($("#question-score").val()),
+            skill_type: {name: $("#question-skill-type").val()},
+            answers: answers_with_is_correct
+        };
+        console.log(questionData);
+        $.ajax({
+
+            url: "http://127.0.0.1:8001/questions/",
+            type: 'POST',
+            crossDomain: true,
+            contentType: 'application/json',
+            data: JSON.stringify(questionData),
+            success: function () {
+                alert("Question added successfully");
+            },
+            error: function () {
+                alert('Please try again!');
+            },
+        });
+        clearQuestionForm();
+        answer_count = 0;
+        question_answers = [];
+
+        return false; // prevent reloading the page
+
+    });
+
+    $("#add-skill-type").click(function () {
+
+        skillTypeData = {
+            name: $("#skill-type-name").val(),
+        };
+
+        $.ajax({
+
+            url: "http://127.0.0.1:8001/skillTypes/",
+            type: 'POST',
+            crossDomain: true,
+            contentType: 'application/json',
+            data: JSON.stringify(skillTypeData),
+            success: function () {
+                alert("Skill type added succefully");
+            },
+            error: function () {
+                alert('Please try again!');
+            },
+        });
+        $("#skill-type-name").val('');
         return false; // prevent reloading the page
     });
 
@@ -42,4 +108,25 @@ $(document).ready(function () {
         });
         return false;
     }
+
+    function clearQuestionForm() {
+        $("input").val('');
+        $("#question-answers").empty();
+        $("#question-answers").append('<div id="appended-answers"></div>');
+
+    }
+
+    $("#add-answer-addon").click(function () {
+        var answer = $("#proposed-answer").val();
+        $("#proposed-answer").val('');
+        $("#appended-answers").append(`<div class="form-check">
+                                        <input class="form-check-input" type="radio" name="answers" id="gridRadios1"
+                                               value="${answer_count}">
+                                        <label class="form-check-label" for="gridRadios1">
+                                            ${answer}
+                                        </label>
+                                    </div>`);
+        answer_count = answer_count + 1;
+        question_answers.push(answer);
+    });
 });
