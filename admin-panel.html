@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Arena - Profile</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Laila:700|Roboto:400,500,900">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body>
+
+<!-- Start Navbar -->
+<div class="header main-back">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="logo">
+            <h2 class="h1 logo"><a href="home.html">Arena</a><i class="fas fa-seedling"></i></h2>
+        </div>
+        <i class="fas fa-bars burgerIcon"></i>
+        <div class="search-bar">
+            <form action="index.html" method="post">
+                <input type="text" name="" value="" placeholder="Search For ...">
+                <button type="submit" class="btn search-btn"><img src="images/search.png" alt=""></button>
+            </form>
+        </div>
+        <div class="collapse navbar-collapse d-flex" id="navbarSupportedContent">
+            <div class="links">
+                <ul class="navbar-nav">
+                    <li><a href="home.php">Home</a></li>
+                    <li><a href="#">Other</a></li>
+                    <li><a href="#">Other</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<!-- End Navbar -->
+
+
+<div class="container">
+    <div class="accordion" id="accordionExample">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
+                        Add quiz
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    <form>
+                        <div class="form-group row">
+                            <label for="quizTitle" class="col-sm-2 col-form-label">Title</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="quizTitle" placeholder="Title">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="quizSkillType" class="col-sm-2 col-form-label">Skill type</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="quizSkillType" placeholder="Skill type">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="quizPassScore" class="col-sm-2 col-form-label">Pass score</label>
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" id="quizPassScore" placeholder="">
+                            </div>
+                        </div>
+                         <div class="form-group row">
+                            <label for="quizNumQuestions" class="col-sm-2 col-form-label">Number of questions</label>
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" id="quizNumQuestions" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="quizDuration" class="col-sm-2 col-form-label">Expected duration</label>
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" id="quizDuration" placeholder="">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" id="add-quiz">Add</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseTwo"
+                            aria-expanded="false" aria-controls="collapseTwo">
+                        Add question
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+                    wolf
+                    moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                    eiusmod.
+                    Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                    shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                    ea
+                    proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw
+                    denim
+                    aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseThree"
+                            aria-expanded="false" aria-controls="collapseThree">
+                        Add skill type
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+                    wolf
+                    moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                    eiusmod.
+                    Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                    shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                    ea
+                    proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw
+                    denim
+                    aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Start Footer -->
+<div class="footer main-back">
+    <div class="container text-center">
+        <h6>All CopyRights &copy; Are Reserved - Made With <i class="fas fa-heart second-color"></i> by <span
+                class="logo">NAS</span> Team</h6>
+    </div>
+</div>
+<!-- End Footer -->
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/quiz.js"></script>
+</body>
+
+</html>
