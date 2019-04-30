@@ -1,8 +1,7 @@
 $(document).ready(function () {
+
     $("#add-quiz").click(function () {
 
-
-        // getAllQuizes();
         quizData = {
             title: $("#quizTitle").val(),
             pass_score: Number($("#quizPassScore").val()),
@@ -11,26 +10,24 @@ $(document).ready(function () {
             skill_type: {name: $("#quizSkillType").val()}
         };
 
-        var response = $.ajax({
-            url: "http://127.0.0.1:8001/quizzes/",
-            dataType: "json",
-            method: "POST",
-            data:{"title":"test","pass_score":5,"num_of_questions":5,"expected_duration":5,"skill_type":{"name":"test"}},
-            success: function () {
-               response = "success";
-            }, error: function (jqXHR, textStatus, errorThrown) {
-                console.log(jqXHR, textStatus, errorThrown);
-            }, complete: function (request, status) {
-                alert("Error with status: " + status);
-            }
-        });
-        alert("test");
-        console.log(response);
+        $.ajax({
 
+            url: "http://127.0.0.1:8001/quizzes/",
+            type: 'POST',
+            crossDomain: true,
+            contentType: 'application/json',
+            data: JSON.stringify(quizData),
+            success: function () {
+                alert("Success");
+            },
+            error: function () {
+                alert('Failed!');
+            },
+        });
+        return false; // prevent reloading the page
     });
 
-    function getAllQuizes() {
-        response = "";
+    function getAllQuizzes() { // for test function
         $.ajax({
             url: "http://127.0.0.1:8001/quizzes/",
             method: "GET",
@@ -43,6 +40,6 @@ $(document).ready(function () {
                 console.log("Error with status: " + status);
             }
         });
-        alert(response);
+        return false;
     }
 });
