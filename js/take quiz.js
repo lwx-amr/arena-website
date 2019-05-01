@@ -36,13 +36,13 @@ function startTimer(time, container, callBack) {
 
         let now = new Date().getTime();
         let distance = countDownDate - now;
-        
+
         let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
         container.innerHTML = hours + ":" + minutes + ":" + seconds;
-    
+
         if (distance < 0) {
             callBack()
             clearInterval(timerInterval);
@@ -52,7 +52,6 @@ function startTimer(time, container, callBack) {
 
 function startQuiz(data) {
     $('.quizForm').children().remove();
-
     instanceQuestions = data.questions;
     data.questions.forEach(question => {
         $('.quizForm').append(generateQuestion(question));
@@ -60,7 +59,7 @@ function startQuiz(data) {
     $('.quizForm').append($('<input type="submit">'));
 
     instanceId = data.id;
-    
+
     startTimer(data.expected_duration, $(".timer")[0], submitQuiz)
 
     $("form").submit(function(e){
