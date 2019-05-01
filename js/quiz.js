@@ -1,3 +1,5 @@
+var quizIP = "http://192.168.99.100:8002";
+var userIP = "http://192.168.99.100:8000";
 $(document).ready(function () {
     var question_answers = [];
     var answer_count = 0;
@@ -14,7 +16,7 @@ $(document).ready(function () {
 
         $.ajax({
 
-            url: "http://127.0.0.1:8001/quizzes/",
+            url: quizIP + "/quizzes/",
             type: 'POST',
             crossDomain: true,
             contentType: 'application/json',
@@ -22,8 +24,8 @@ $(document).ready(function () {
             success: function () {
                 alert("Quiz added succefully");
             },
-            error: function () {
-                alert('Please try again');
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                alert("Error: " + XMLHttpRequest.responseJSON.error);
             },
         });
         return false; // prevent reloading the page
@@ -48,8 +50,7 @@ $(document).ready(function () {
         };
         console.log(questionData);
         $.ajax({
-
-            url: "http://127.0.0.1:8001/questions/",
+            url: quizIP + "/questions/",
             type: 'POST',
             crossDomain: true,
             contentType: 'application/json',
@@ -57,8 +58,8 @@ $(document).ready(function () {
             success: function () {
                 alert("Question added successfully");
             },
-            error: function () {
-                alert('Please try again!');
+            error: function (XMLHttpRequest) {
+                alert("Error: " + XMLHttpRequest.responseJSON.error);
             },
         });
         clearQuestionForm();
@@ -77,7 +78,7 @@ $(document).ready(function () {
 
         $.ajax({
 
-            url: "http://127.0.0.1:8001/skillTypes/",
+            url: quizIP + "/skillTypes/",
             type: 'POST',
             crossDomain: true,
             contentType: 'application/json',
@@ -95,7 +96,7 @@ $(document).ready(function () {
 
     function getAllQuizzes() { // for test function
         $.ajax({
-            url: "http://127.0.0.1:8001/quizzes/",
+            url: quizIP + "/quizzes/",
             method: "GET",
             success: function (data) {
                 response = data;

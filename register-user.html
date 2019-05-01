@@ -83,27 +83,21 @@
                  <!-- Personal Details -->
                   <div class="tab personal">
                     <div class="form-group d-flex aligned">
-                      <div class="file">
-                        <input type="file" name="image" id="image" required>
-                      </div>
                       <div class="name">
-                        <input type="text" name="name" id="name" placeholder="Name" required>
-                        <input type="text" name="title" id="title" placeholder="Title" required>
+                        <input type="text" name="fname" id="fname" placeholder="First Name" required>
+                        <input type="text" name="lname" id="lname" placeholder="Last Name" required>
                       </div>
-                    </div>
-                    <div class="form-group d-flex">
-                      <input type="text" name="tele" id="tele" placeholder="Telephone" required>
                     </div>
                     <div class="form-group d-flex aligned">
-                      <div class="gender">
-                        <select name="" required>
+                      <div class="gender" >
+                        <select name="" id="gender" required>
                           <option value="" hidden readonly>Gender</option>
                           <option value="male">Male</option>
                           <option value="female">Female</option>
                         </select>
                       </div>
                       <div class="age-select">
-                        <select class="age">
+                        <select class="age" id="age">
                           <option value="" hidden readonly>Age</option>
                         </select>
                       </div>
@@ -115,60 +109,7 @@
                     <div class="form-group">
                       <h6>Choice Your Interests</h6>
                       <div class="checkboxs">
-                        <div class="element">
-                          <label>Front End
-                            <input type="checkbox" name="interests1" value="closed">
-                            <span class="checkmark"></span>
-                          </label>
-                        </div>
-                        <div class="element">
-                          <label>Back End
-                            <input type="checkbox" name="interests2" value="back">
-                            <span class="checkmark"></span>
-                          </label>
-                        </div>
-                        <div class="element">
-                          <label>Graphic
-                            <input type="checkbox" name="interests3" value="Graphic">
-                            <span class="checkmark"></span>
-                          </label>
-                        </div>
-                        <div class="element">
-                          <label>Motion Graphic
-                            <input type="checkbox" name="interests4" value="motion">
-                            <span class="checkmark"></span>
-                          </label>
-                        </div>
-                        <div class="element">
-                          <label>Programming
-                            <input type="checkbox" name="interests5" value="prog">
-                            <span class="checkmark"></span>
-                          </label>
-                        </div>
-                        <div class="element">
-                          <label>Network
-                            <input type="checkbox" name="interests6" value="network">
-                            <span class="checkmark"></span>
-                          </label>
-                        </div>
-                        <div class="element">
-                          <label>Secuirty
-                            <input type="checkbox" name="interests7" value="secuirty">
-                            <span class="checkmark"></span>
-                          </label>
-                        </div>
-                        <div class="element">
-                          <label>Marketing
-                            <input type="checkbox" name="interests8" value="marketing">
-                            <span class="checkmark"></span>
-                          </label>
-                        </div>
-                        <div class="element">
-                          <label>Business
-                            <input type="checkbox" name="interests9" value="business">
-                            <span class="checkmark"></span>
-                          </label>
-                        </div>
+
                       </div>
                     </div>
                   </div>
@@ -188,5 +129,6 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/register-user.js"></script>
   </body>
 </html>

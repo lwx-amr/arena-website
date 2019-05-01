@@ -1,3 +1,5 @@
+var quizIP = "http://192.168.99.100:8002";
+var userIP = "http://192.168.99.100:8000";
 function generateAnswer(answer, questionId) {
     const container = $("<div></div>").addClass("flexRow answer");
     const label = $("<label></label>");
@@ -82,7 +84,7 @@ function submitQuiz(){
     });
 
     $.ajax({
-        url: "http://127.0.0.1:8000/quiz/submit/" + instanceId,
+        url: quizIP + "/quiz/submit/" + instanceId,
         type: 'POST',
         crossDomain: true,
         contentType: 'application/json',
@@ -101,7 +103,8 @@ function submitQuiz(){
 }
 
 const quizId = window.location.hash.slice(1);
-const userId = 1;
+const userId = Cookies.get('userId');
+
 let instanceId;
 let instanceQuestions;
 let timerInterval;
@@ -111,7 +114,7 @@ if (!$.isNumeric(quizId) || !$.isNumeric(userId)) {
 }
 
 $.ajax({
-    url: "http://127.0.0.1:8000/quiz/take/" + quizId,
+    url: quizIP + "/quiz/take/" + quizId,
     type: 'POST',
     crossDomain: true,
     contentType: 'application/json',
