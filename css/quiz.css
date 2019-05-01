@@ -1,3 +1,68 @@
 #add-answer-addon {
     cursor: pointer;
 }
+
+.admin-control-card {
+    margin: 5%;
+    /*#82B541*/
+    background-color: #fff;
+}
+
+.admin-add-btn {
+    background: #fff;
+    color: #82B541;
+    margin: 4% auto;
+}
+
+.admin-add-btn:hover {
+    background: #82B541;
+    color: #fff;
+    margin: 4% auto;
+}
+
+
+
+
+
+
+.search-quiz {
+    margin-bottom: 10%;
+    margin-left: 5%;
+}
+
+.search-quiz button {
+    text-align: center;
+    border: 0;
+    margin: 0 5%;
+    background-color: #82B541;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 500;
+    border-right: 1px solid #cccccc50;
+    width: 16%;
+}
+
+.search-quiz button:hover {
+    background-color: #82B541;
+}
+
+.quiz-card {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    margin: 5%;
+    padding: 5%;
+}
+
+#take-quiz-btn {
+    width: 120px;
+    height: auto;
+    padding: 10px 0px 8px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 14px 0 0;
+    line-height: 1;
+    cursor: pointer;
+    background: #82B541;
+}
