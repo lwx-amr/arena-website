@@ -113,6 +113,11 @@ if (!$.isNumeric(quizId) || !$.isNumeric(userId)) {
     window.location.href = "home.html";
 }
 
+$(".logoutLink").click(() => {
+    Cookies.remove('userId');
+    window.location.href = "home.html";
+})
+
 $.ajax({
     url: quizIP + "/quiz/take/" + quizId,
     type: 'POST',
