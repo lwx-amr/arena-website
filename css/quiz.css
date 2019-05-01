@@ -2,6 +2,29 @@
     cursor: pointer;
 }
 
+.admin-control-card {
+    margin: 5%;
+    /*#82B541*/
+    background-color: #fff;
+}
+
+.admin-add-btn {
+    background: #fff;
+    color: #82B541;
+    margin: 4% auto;
+}
+
+.admin-add-btn:hover {
+    background: #82B541;
+    color: #fff;
+    margin: 4% auto;
+}
+
+
+
+
+
+
 .search-quiz {
     margin-bottom: 10%;
     margin-left: 5%;
