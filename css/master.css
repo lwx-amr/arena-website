@@ -769,14 +769,14 @@ a:focus{
   text-align: center;
   line-height: 90px;
   font-size: 30px;
-  
+
 }
 
 
 .register .form .file input[type="file"].invalid::after{
   background-color: #ffdddd;
 }
-	
+
 .register .form .foot h6{
   margin: 30px 0 0 60px;
 }
@@ -1096,6 +1096,7 @@ a:focus{
   padding-bottom: 0;
   position: relative;
   overflow: hidden;
+  min-height: 230px;
 }
 .profile .posts .post .image img{
   width: 100%;
