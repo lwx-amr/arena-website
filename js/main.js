@@ -14,7 +14,7 @@ $(function () {
     // Adjust Pannel design
     $('.pannel i').on('click',function(){
         $('.pannel').toggleClass('active');
-    })
+    });
 
     // Options
     $(".options li").on("click",function(){
@@ -22,14 +22,14 @@ $(function () {
         scrollTop:$('.options').offset().top
       },800);
       $(this).addClass("active").siblings().removeClass("active");
-    })
+    });
     $(".votes i").on("click",function(){
       if($(this).hasClass("active")){
         $(this).removeClass("active");
         return;
       }
       $(this).addClass("active").parent().siblings().find('i').removeClass("active");
-    })
+    });
 
     // Adjust Follow Click
     $('.follow .btn').on('click',function(e){
@@ -41,7 +41,11 @@ $(function () {
           $(this).addClass("followed");
           $(this).html("Followed");
         }
-    })
+    });
+    $("#logout-btn").click(function () {
+        window.location.href = "login.html";
+        Cookies.remove('userId');
+    });
 
-})
+});
 
