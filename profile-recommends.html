@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Arena - Profile</title>
@@ -8,128 +8,137 @@
     <link rel="stylesheet" href="css/fontawesome-all.min.css">
     <link rel="stylesheet" href="css/master.css">
     <link rel="stylesheet" href="css/media.css">
+    <link href="css/quiz.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Laila:700|Roboto:400,500,900">
-  </head>
-  <body>
+</head>
+<body>
 
-    <!-- Start Navbar -->
-    <div class="header main-back">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="logo">
+<!-- Start Navbar -->
+<div class="header main-back">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="logo">
             <h2 class="h1 logo"><a href="home.html">Arena</a><i class="fas fa-seedling"></i></h2>
-          </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse d-flex" id="navbarSupportedContent">
+        </button>
+        <div class="collapse navbar-collapse d-flex" id="navbarSupportedContent">
             <div class="links">
-              <ul class="navbar-nav">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="explore-users.html">Explore</a></li>
-              </ul>
+                <ul class="navbar-nav">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="explore-users.html">Explore</a></li>
+                </ul>
             </div>
-          </div>
-        </nav>
-    </div>
-    <!-- End Navbar -->
+        </div>
+    </nav>
+</div>
+<!-- End Navbar -->
 
-    <!-- Start Profile -->
-    <div class="profile">
-      <!-- Start Page Head -->
-      <div class="page-head">
+<!-- Start Profile -->
+<div class="profile">
+    <!-- Start Page Head -->
+    <div class="page-head">
         <div class="cover text-center">
-          <img src="images/site-cover.jpg" alt="">
+            <img src="images/site-cover.jpg" alt="">
         </div>
         <div class="details">
-          <div class="image">
-            <img src="images/profiles/5.jpg" alt="">
-          </div>
-          <div class="text">
-            <h3 class="name">John Snow</h3>
-            <span class="title">motion graphic expert </span>
-          </div>
+            <div class="image">
+                <img src="images/profiles/5.jpg" alt="">
+            </div>
+            <div class="text">
+                <h3 class="name">John Snow</h3>
+                <span class="title">motion graphic expert </span>
+            </div>
         </div>
         <div class="options">
-          <div class="controls">
-            <ul class="list-unstyled">
-              <li data-filter=".posts" value="Posts"><a href="profile.html">Posts</a>
-              </li><li class="active" data-filter=".other" value="other"><a href="#">Recommends</a>
-              </li><li data-filter=".other" value="other"><a href="profile-following.html">Following</a>
-              </li><li data-filter=".other" value="other"><a href="profile-about.html">About</a></li>
-            </ul>
-          </div>
+            <div class="controls">
+                <ul class="list-unstyled">
+                    <li data-filter=".posts" value="Posts"><a href="profile.html">Posts</a>
+                    </li>
+                    <li class="active" data-filter=".other" value="other"><a href="#">Recommends</a>
+                    </li>
+                    <li data-filter=".other" value="other"><a href="profile-following.html">Following</a>
+                    </li>
+                    <li data-filter=".other" value="other"><a href="profile-about.html">About</a></li>
+                </ul>
+            </div>
         </div>
-      </div>
-      <!-- End Page Head -->
-      <!-- Start Body -->
-      <div class="container">
-        <div class="content">
-
-        </div>
-      </div>
-      <!-- End Body -->
     </div>
-    <!-- End Profile -->
+    <!-- End Page Head -->
+    <!-- Start Body -->
+    <div class="container">
+            <div class="quizzes">
+            </div>
 
-    <!-- Start Pannel -->
-    <div class="pannel">
-      <div class="admin">
+    </div>
+    <!-- End Body -->
+</div>
+<!-- End Profile -->
+
+<!-- Start Pannel -->
+<div class="pannel">
+    <div class="admin">
         <div class="image">
-          <img class="mr-3" src="images/profiles/5.jpg" alt="Generic placeholder image">
+            <img class="mr-3" src="images/profiles/5.jpg" alt="Generic placeholder image">
         </div>
         <h6 class="mt-0">John Snow</h6>
-      </div>
-      <a class="second-back insert" href="profile.html"><i class="fas fa-user"></i> Profile </a>
-      <div class="logout">
+    </div>
+    <a class="second-back insert" href="profile.html"><i class="fas fa-user"></i> Profile </a>
+    <div class="logout">
         <a class="second-back" href="logout.php"><i class="fas fa-sign-out-alt"></i> Log out</a>
-      </div>
-      <i class="fas fa-cog"></i>
     </div>
-    <!-- End Pannel -->
+    <i class="fas fa-cog"></i>
+</div>
+<!-- End Pannel -->
 
-    <!-- Start createPost PopUp -->
-    <div class="modal post-model fade" id="createPost" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
+<!-- Start createPost PopUp -->
+<div class="modal post-model fade" id="createPost" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="modal-body">
-            <div class="media post">
-              <div class="image">
-                <img src="images/profiles/5.jpg" alt="">
-              </div>
-              <div class="media-body form">
-                <form class="postForm" action="index.html" method="post" id="creationForm">
-                  <div class="form-group">
-                    <textarea class="form-control" name="content" placeholder="What's in your mind?" required></textarea>
-                  </div>
-                </form>
-              </div>
+            <div class="modal-body">
+                <div class="media post">
+                    <div class="image">
+                        <img src="images/profiles/5.jpg" alt="">
+                    </div>
+                    <div class="media-body form">
+                        <form class="postForm" action="index.html" method="post" id="creationForm">
+                            <div class="form-group">
+                                <textarea class="form-control" name="content" placeholder="What's in your mind?"
+                                          required></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="modal-footer">
-            <div class="form-group">
-              <select class="privacy" name="privacy" form="creationForm">
-                <option value="pub">Public</option>
-                <option value="fol">Followers</option>
-                <option value="com">Companies</option>
-              </select>
+            <div class="modal-footer">
+                <div class="form-group">
+                    <select class="privacy" name="privacy" form="creationForm">
+                        <option value="pub">Public</option>
+                        <option value="fol">Followers</option>
+                        <option value="com">Companies</option>
+                    </select>
+                </div>
+                <input type="submit" class="btn btn-green" value="Publish" form="creationForm">
             </div>
-            <input type="submit" class="btn btn-green" value="Publish" form="creationForm">
-          </div>
         </div>
-      </div>
     </div>
-    <!-- End createPost PopUp -->
+</div>
+<!-- End createPost PopUp -->
 
-    <!-- Start Footer -->
-    <div class="footer main-back">
-      <div class="container text-center">
-          <h6>All CopyRights &copy; Are Reserved - Made With <i class="fas fa-heart second-color"></i> by <span class="logo">Arena</span> Team</h6>
-      </div>
+<!-- Start Footer -->
+<div class="footer main-back">
+    <div class="container text-center">
+        <h6>All CopyRights &copy; Are Reserved - Made With <i class="fas fa-heart second-color"></i> by <span
+                class="logo">Arena</span> Team</h6>
     </div>
-    <!-- End Footer -->
+</div>
+<!-- End Footer -->
 
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/profile-recommends.js"></script>
+</body>
 </html>
