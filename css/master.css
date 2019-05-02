@@ -1,6 +1,6 @@
 /*----------------------------- Start Global ---------------------------------*/
 body{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto' , sans-serif;
 }
 h1,
 h2,
@@ -13,6 +13,7 @@ h6{
 h1{
   font-size: 200px;
   font-family: 'Laila', serif;
+  font-weight: bold;
   margin-bottom: 0;
 }
 h2{
@@ -594,6 +595,7 @@ a:focus{
 .logo,
 .head h2{
   font-family: "laila";
+  font-weight: bold;
 }
 .head h2{
   /* font-size: 36px; */
@@ -799,6 +801,7 @@ a:focus{
 .access .overlay .text h2{
   font-size: 60px;
   margin-top: 30px;
+  font-family: "laila"
 }
 .access .overlay .text p:last-of-type{
   font-size: 18px;
