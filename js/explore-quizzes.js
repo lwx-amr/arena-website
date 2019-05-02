@@ -1,4 +1,4 @@
-var quizIP = "http://127.0.0.1:8001";
+var quizIP = "http://192.168.99.100:8002";
 var userIP = "http://192.168.99.100:8000";
 $(document).ready(function () {
 
@@ -33,7 +33,7 @@ $(document).ready(function () {
                     <p id="quiz-num-of-questions">Number of questions: ${quiz.num_of_questions}</p>
                     <p id="quiz-expected-duration">Expected duration: ${quiz.expected_duration}</p>
                     <p id="quiz-pass-score">Pass score: ${quiz.pass_score}</p>
-                    <a href="take-quiz.html/#${quiz.id}" id="take-quiz-btn" class="btn">Take this quiz</a>
+                    <a href="take-quiz.html?#${quiz.id}" id="take-quiz-btn" class="btn">Take this quiz</a>
                     </div>
                     `);
                 });

@@ -14,7 +14,7 @@ $(function () {
     // Adjust Pannel design
     $('.pannel i').on('click',function(){
         $('.pannel').toggleClass('active');
-    })
+    });
 
     // Options
     $(".options li").on("click",function(){
@@ -34,6 +34,10 @@ $(function () {
           $(this).addClass("followed");
           $(this).html("Followed");
         }
-    })
+    });
+    $("#logout-btn").click(function () {
+        window.location.href = "login.html";
+        Cookies.remove('userId');
+    });
 
 })
