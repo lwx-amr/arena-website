@@ -283,7 +283,7 @@ a:hover{
   display: flex;
   justify-content: space-between;
 }
-.comments-model button{
+.comments-model .form-group>span{
   padding: 9px 12px 10px;
   height: 42px;
   background-color: #82B541 !important;
@@ -324,6 +324,131 @@ a:hover{
 .comments-model .modal-dialog{
   max-width: 560px !important;
 }
+.posts .post {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 60px;
+  min-height: 220px;
+}
+.posts .post .btn{
+  position: absolute;
+  bottom: -50px;
+  left: calc(50% - 50px);
+  width: 100px;
+  height: 100px;
+  color: #fff;
+  background-color: #82B541;
+  padding: 5px 10px;
+  font-size: 14px;
+  border: 0;
+  margin: 0 auto;
+  border-radius: 50%;
+  line-height: 50px;
+}
+.posts .post .image{
+  width: 65px;
+  height: 65px;
+ border-radius: 50%;
+ overflow: hidden;
+ flex-shrink: 0;
+ margin-right: 20px;
+ margin-top: 20px;
+}
+.posts .post .post-content{
+  border: 1px solid #ddd;
+  width: 700px;
+  padding: 20px 80px 20px 20px;
+  border-radius: 4px;
+  padding-bottom: 0;
+  position: relative;
+  overflow: hidden;
+}
+.posts .post .image img{
+  width: 100%;
+}
+.posts .post .post-content h6{
+  margin-bottom: 30px;
+}
+.posts .post .post-content h6 i,i.dot{
+  width: 5px;
+  height: 5px;
+  background-color: #33333380;
+  border-radius: 50%;
+  display: inline-block;
+  margin:0 5px 2px;
+}
+.posts .post .post-content .date{
+  margin-left: 20px;
+}
+.posts .post .post-content h6 span{
+  font-size: 12px;
+  color: #99999998;
+}
+.posts .post .post-content p{
+  color: #777;
+  margin-left: 20px;
+  padding-right: 50px;
+  padding-bottom: 60px;
+}
+.posts .post .post-content .hr{
+  width: 80%;
+  height: 1px;
+  /* background-color: #f5f5f5; */
+  margin: auto;
+  display: block;
+}
+.posts .post .post-content .votes{
+  position: absolute;
+  top:22%;
+  right: 20px;
+}
+.posts .post .post-content .votes i{
+  width: 30px;
+  height: 30px;
+  color: rgba(51, 51, 51,0.2);
+  background-color: rgba(245, 245, 245,0.2);
+  text-align: center;
+  line-height: 30px;
+  display: block;
+  padding-left: 1px;
+  transition: all 0.2s ease-in-out;
+  flex-shrink: 0;
+}
+.posts .post .post-content .votes i:last-of-type{
+  padding-top: 2px;
+}
+.posts .post .post-content .votes i:hover{
+  color: rgba(51, 51, 51,1);
+  background-color: rgba(245, 245, 245,1);
+  cursor: pointer;
+}
+.posts .post .post-content .votes i.disabled:hover{
+  color: rgba(51, 51, 51,0.2);
+  background-color: rgba(245, 245, 245,0.2);
+  cursor: auto;
+}
+.posts .post .post-content .votes div{
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+  color: #777;
+}
+.posts .post .post-content .votes .down{
+  display: flex;
+  width: 30px;
+  flex-wrap: wrap;
+}
+.posts .post .post-content .votes .down i{
+  order: 12;
+}
+.posts .post .post-content .votes .down span{
+  margin-left: 12px;
+  margin-bottom: 4px;
+}
+
+.posts .post .post-content .votes span{
+  font-size: 10px;
+}
 /*----------------------------- Start Global ---------------------------------*/
 /*----------------------------- Start Framework ---------------------------------*/
 .h1{
@@ -351,7 +476,7 @@ a:hover{
   background-color: rgba(0, 0, 0, 0.4)
 }
 .nice-font{
-  /* font-family: "another day in paradise" */
+  font-family: "another day in paradise"
 }
 .btn{
  display: block;
@@ -769,14 +894,14 @@ a:focus{
   text-align: center;
   line-height: 90px;
   font-size: 30px;
-  
+
 }
 
 
 .register .form .file input[type="file"].invalid::after{
   background-color: #ffdddd;
 }
-	
+
 .register .form .foot h6{
   margin: 30px 0 0 60px;
 }
@@ -1006,7 +1131,17 @@ a:focus{
 }
 /*--------------------------------- End Header ------------------------------*/
 /*--------------------------------- Start Home ------------------------------*/
-
+.home .head{
+  margin-top: 0px;
+  padding: 0;
+  margin-bottom: 100px;
+}
+.home .head h2{
+  font-size: 28px;
+}
+.home .post{
+  550px;
+}
 /*--------------------------------- End Home ------------------------------*/
 /*----------------------------- Start Profile ---------------------------------*/
 .profile .page-head h3{
@@ -1055,127 +1190,6 @@ a:focus{
   text-transform: capitalize;
   display: block;
   margin-top: 5px;
-}
-.profile .posts .post {
-  display: flex;
-  justify-content: flex-start;
-
-
-
-}
-.profile .posts .post .btn{
-
-  position: absolute;
-  bottom: -50px;
-  left: calc(50% - 50px);
-  width: 100px;
-  height: 100px;
-  color: #fff;
-  background-color: #82B541;
-  padding: 5px 10px;
-  font-size: 14px;
-  border: 0;
-  margin: 0 auto;
-  border-radius: 50%;
-  line-height: 50px;
-}
-.profile .posts .post .image{
-  width: 65px;
-  height: 65px;
- border-radius: 50%;
- overflow: hidden;
- flex-shrink: 0;
- margin-right: 20px;
- margin-top: 20px;
-}
-.profile .posts .post .post-content{
-  border: 1px solid #ddd;
-  width: 700px;
-  padding: 20px 80px 20px 20px;
-  border-radius: 4px;
-  padding-bottom: 0;
-  position: relative;
-  overflow: hidden;
-}
-.profile .posts .post .image img{
-  width: 100%;
-}
-.profile .posts .post .post-content h6{
-  margin-bottom: 30px;
-}
-.profile .posts .post .post-content h6 i,i.dot{
-  width: 5px;
-  height: 5px;
-  background-color: #33333380;
-  border-radius: 50%;
-  display: inline-block;
-  margin:0 5px 2px;
-}
-.profile .posts .post .post-content .date{
-  margin-left: 20px;
-}
-.profile .posts .post .post-content h6 span{
-  font-size: 12px;
-  color: #99999998;
-}
-.profile .posts .post .post-content p{
-  color: #777;
-  margin-left: 20px;
-  padding-right: 50px;
-  padding-bottom: 60px;
-}
-.profile .posts .post .post-content .hr{
-  width: 80%;
-  height: 1px;
-  /* background-color: #f5f5f5; */
-  margin: auto;
-  display: block;
-}
-.profile .posts .post .post-content .votes{
-  /* padding: 20px; */
-  /* background-color: #ccc; */
-  position: absolute;
-
-
-  top:30%;
-  right: 20px;
-}
-.profile .posts .post .post-content .votes i{
-  width: 30px;
-
-
-
-
-  height: 30px;
-  color: rgba(51, 51, 51,0.2);
-  background-color: rgba(245, 245, 245,0.2);
-  text-align: center;
-  line-height: 30px;
-  display: block;
-  padding-left: 1px;
-  transition: all 0.2s ease-in-out;
-}
-.profile .posts .post .post-content .votes i:last-of-type{
-  padding-top: 2px;
-}
-.profile .posts .post .post-content .votes i:hover{
-
-  color: rgba(51, 51, 51,1);
-  background-color: rgba(245, 245, 245,1);
-  cursor: pointer;
-}
-.profile .posts .post .post-content .votes i.active{
-  background-color: #82B541;
-  color: #fff;
-}
-.profile .posts .post .post-content .votes div{
-  margin-bottom: 30px;
-  text-align: center;
-  font-weight: bold;
-  color: #777;
-}
-.profile .posts .post .post-content .votes span{
-  font-size: 10px;
 }
 .profile .following .users{
   margin: 0 40px;

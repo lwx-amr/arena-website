@@ -23,13 +23,6 @@ $(function () {
       },800);
       $(this).addClass("active").siblings().removeClass("active");
     })
-    $(".votes i").on("click",function(){
-      if($(this).hasClass("active")){
-        $(this).removeClass("active");
-        return;
-      }
-      $(this).addClass("active").parent().siblings().find('i').removeClass("active");
-    })
 
     // Adjust Follow Click
     $('.follow .btn').on('click',function(e){
@@ -44,4 +37,3 @@ $(function () {
     })
 
 })
-

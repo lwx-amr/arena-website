@@ -38,7 +38,12 @@
         <div class="container">
             <!-- Start Body -->
             <div class="content">
+              <div class="head text-center">
+                <h2>Welcome In Arena Community</h2>
+              </div>
+              <div class="posts">
 
+              </div>
             </div>
         </div>
         <!-- End Body -->
@@ -61,6 +66,33 @@
     </div>
     <!-- End Pannel -->
 
+    <!-- Start Comment PopUp -->
+    <div class="modal post-model comments-model fade" id="comments" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h6 class="text-center">Comments</h6>
+            <div class="media post">
+              <div class="image">
+                <img src="images/profiles/user.jpeg" alt="">
+              </div>
+              <div class="media-body form">
+                <form class="postForm" action="index.html" method="post" id="commentCreate">
+                  <div class="form-group">
+                    <textarea  id="text-comment" class="form-control" name="content" placeholder="What's your opinion?" required></textarea>
+                    <span name="button" onclick="addComment()" data-dismiss="modal"><i class="fas fa-paper-plane" ></i></span>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="post-comments">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Comment PopUp -->
 
     <!-- Start Footer -->
     <div class="footer main-back">
@@ -73,5 +105,6 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
   </body>
 </html>

@@ -42,7 +42,7 @@
         </div>
         <div class="details">
           <div class="image">
-            <img src="images/profiles/5.jpg" alt="">
+            <img src="images/profiles/user.jpeg" alt="">
           </div>
           <div class="text">
             <h3 class="name">John Snow</h3>
@@ -68,7 +68,7 @@
           <div class="createPost" data-toggle="modal" data-target="#createPost">
             <div class="media post">
               <div class="image">
-                <img src="images/profiles/5.jpg" alt="">
+                <img src="images/profiles/user.jpeg" alt="">
               </div>
               <div class="media-body">
                 <p>Write anything in your mind...</p>
@@ -76,32 +76,7 @@
             </div>
           </div>
           <div class="posts">
-            <div class="post">
-              <div class="image">
-                <img src="images/profiles/5.jpg" alt="">
-              </div>
-              <div class="post-content">
-                <div class="text">
-                  <h6 class="name second-color">John Snow <span class="date">April 15</span><i></i><span>5:00 PM</span></h6>
-                  <p>Testing ...</p>
-                  <span class="hr"></span>
-                  <button onclick="getPosts(5)">Amr</button>
-                </div>
-                <div class="votes">
-                  <div class="up">
-                    <i class="fas fa-chevron-up active"></i>
-                    <span>120</span>
-                  </div>
-                  <div class="down">
-                    <span>20</span>
-                    <i class="fas fa-chevron-down"></i>
-                  </div>
-                </div>
-                <div class="comments btn" data-toggle="modal" data-target="#comments">
-                  <span>Comments</span>
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>
@@ -113,7 +88,7 @@
     <div class="pannel">
       <div class="admin">
         <div class="image">
-          <img class="mr-3" src="images/profiles/5.jpg" alt="Generic placeholder image">
+          <img class="mr-3" src="images/profiles/user.jpeg" alt="Generic placeholder image">
         </div>
         <h6 class="mt-0">John Snow</h6>
       </div>
@@ -132,7 +107,7 @@
           <div class="modal-body">
             <div class="media post">
               <div class="image">
-                <img src="images/profiles/5.jpg" alt="">
+                <img src="images/profiles/user.jpeg" alt="">
               </div>
               <div class="media-body form">
                 <form class="postForm" action="profile.html" method="post" id="creationForm">
@@ -151,7 +126,7 @@
                 <option value="com">Companies</option>
               </select>
             </div>
-            <input class="btn btn-green" value="Publish" form="creationForm" onclick="submitPost(5,'Amr Hussien')" onsubmit="return flase;">
+            <input id="addPost" class="btn btn-green" value="Publish" form="creationForm" data-dismiss="modal" onsubmit="return flase;">
           </div>
         </div>
       </div>
@@ -166,65 +141,25 @@
             <h6 class="text-center">Comments</h6>
             <div class="media post">
               <div class="image">
-                <img src="images/profiles/5.jpg" alt="">
+                <img src="images/profiles/user.jpeg" alt="">
               </div>
               <div class="media-body form">
                 <form class="postForm" action="index.html" method="post" id="commentCreate">
                   <div class="form-group">
-                    <textarea class="form-control" name="content" placeholder="What's your opinion?" required></textarea>
-                    <button type="submit" name="button" form="commentCreate"><i class="fas fa-paper-plane"></i></button>
+                    <textarea  id="text-comment" class="form-control" name="content" placeholder="What's your opinion?" required></textarea>
+                    <span name="button" onclick="addComment()"><i class="fas fa-paper-plane" ></i></span>
                   </div>
                 </form>
               </div>
             </div>
             <div class="post-comments">
-              <div class="comment">
-                <div class="media">
-                  <img src="images/profiles/6.jpg" alt="">
-                  <div class="media-body">
-                    <h6>Johny Dep</h6>
-                    <span>April 25 <i class="dot"></i> 5:00 PM</span>
-                    <p>reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="comment">
-                <div class="media">
-                  <img src="images/profiles/6.jpg" alt="">
-                  <div class="media-body">
-                    <h6>Johny Dep</h6>
-                    <span>April 25 <i class="dot"></i> 5:00 PM</span>
-                    <p>reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="comment">
-                <div class="media">
-                  <img src="images/profiles/6.jpg" alt="">
-                  <div class="media-body">
-                    <h6>Johny Dep</h6>
-                    <span>April 25 <i class="dot"></i> 5:00 PM</span>
-                    <p>reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="comment">
-                <div class="media">
-                  <img src="images/profiles/6.jpg" alt="">
-                  <div class="media-body">
-                    <h6>Johny Dep</h6>
-                    <span>April 25 <i class="dot"></i> 5:00 PM</span>
-                    <p>reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  </div>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>
       </div>
     </div>
     <!-- End Comment PopUp -->
-
 
     <!-- Start Footer -->
     <div class="footer main-back">

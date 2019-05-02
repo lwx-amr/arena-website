@@ -1,47 +1,43 @@
 var postsURL= "http://192.168.99.100:8080/posts/";
 var postURL = "http://192.168.99.100:8080/post/";
 
+var votingURL = "http://192.168.99.100:8080/voting/";
+
+var followURL = "http://192.168.99.100:8080/follower/";
+var followsURL = "http://192.168.99.100:8080/followers/";
+
 var uID  = "5";
 var currentName = "Amr Hussien";
 
 let postIDLatest = "";
-
 $(function(){
 
-  // Get All Post Of Current User ID
-  $(window).on("load",getAllPosts());
-
-  // Create New User
-  $("#addPost").on("click",function(){
-      var postContent = $('#text').val();
-      $('#text').val("");
-      var priv =$('#privacy').val();
-      var myObj = {
-            text: postContent,
-            privacy: priv,
-            userId: uID ,
-            name: currentName};
-      console.log(myObj);
-      $.ajax({
-        url: postURL,
-        type: 'POST',
-        crossDomain: true,
-        contentType: 'application/json',
-        data: JSON.stringify(myObj),
-        success: function () {
-            getAllPosts(-1); // to get last Post
-        },
-        error: function () {
-            alert("An error has occurred");
-        },
-      });
-  })
+  // Get All Post Of Current User
+  $(window).on("load",getFollowers(uID));
 
 })
 
+// Get Followers Of Current user
+function getFollowers(userID) {
+  $.ajax({
+      url: followsURL + userID,
+      type: 'GET',
+      contentType: 'application/json',
+      success: function (res){
+        for(var j=0 ; j < res.length ; j++){
+          console.log("Res: " + res);
+          var followedUser = res[j];
+          getAllPosts(followedUser);
+         }
+      },
+      error: function () {
+        alert("Something Went Wrong!!");
+      },
+  });
+}
+
 // Get All Post Of User
-function getAllPosts(num){
-    var userID = "5";
+function getAllPosts(userID){
     $.ajax({
         url: postsURL + userID,
         type: 'GET',
@@ -63,12 +59,12 @@ function getAllPosts(num){
                 "</div>"+
                 "<div class='votes'>"+
                   "<div class='up'>"+
-                    "<i class='fas fa-chevron-up disabled'></i>"+
+                    "<i class='fas fa-chevron-up active' onclick=votingUp('"+postData._id+"','"+uID+"','evnt')></i>"+
                     "<span>"+postData.votesUp+"</span>"+
                   "</div>"+
                   "<div class='down'>"+
+                    "<i class='fas fa-chevron-down' onclick=votingDown('"+postData._id+"','"+uID+"','evnt')></i>"+
                     "<span>"+postData.votesDown+"</span>"+
-                    "<i class='fas fa-chevron-down disabled'></i>"+
                   "</div>"+
                 "</div>"+
                 "<div class='comments btn' data-toggle='modal' data-target='#comments' data-postid="+postData._id+">"+
@@ -76,11 +72,7 @@ function getAllPosts(num){
                 "</div>"+
               "</div>"+
             "</div>";
-            if(num==-1){
-              $(".profile .posts").prepend(currentPost);
-              break;
-            }
-            $(".profile .posts").append(currentPost);
+            $(".home .posts").append(currentPost);
           }
         },
         error: function () {
@@ -146,7 +138,44 @@ function addComment(){
           getAllComments(-1); // to get last Post
       },
       error: function () {
-          //alert("An error has occurred");
+        //  alert("An error has occurred");
       },
     });
+}
+
+// Voting Up
+function votingUp(postID,userID,evnt) {
+  //evnt.currentTarget.value +=1;
+  /*$.ajax({
+    url: votingURL + postID + "/" + userID,
+    type: 'POST',
+    crossDomain: true,
+    contentType: 'application/json',
+    success: function () {
+        getAllComments(-1); // to get last Post
+    },
+    error: function () {
+
+    },
+  });
+  */
+}
+
+// Voting Down
+function votingDown(postID,userID,flag) {
+  if(flag==0){
+    return;
+  }
+  $.ajax({
+    url: votingURL + postID + "/" + userID,
+    type: 'DELETE',
+    crossDomain: true,
+    contentType: 'application/json',
+    success: function () {
+        getAllComments(-1); // to get last Post
+    },
+    error: function () {
+
+    },
+  });
 }
